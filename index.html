@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentationportfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon/favicon.png" type="image/png">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div id="loader">
+             <div id="loader-text">LOADING <br> AWESOME CONTENT </div>
+            <div id="progress">
+                <div id="bar"></div>
+            </div>
+            <p id="progress-text">0%</p>
+        </div>
+    </div>
+
+    <div id="content" style="display:none;">
+    </div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav__container">
+    <a href="index.html" class="logo-link">
+      <img src="images/cfj_logo.png" alt="Logo" height="100">
+    </a>
+    <a href="index.html" class="site-name-link">
+      <span class="site-name">CINDIE F. JØNSSON</span>
+    </a>
+    <ul class="nav-list">
+      <li class="nav-list__item"><a href="#welcome-section">ABOUT</a></li>
+      <li class="nav-list__item"><a href="all-projects.html" class="active">PROJECTS</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<section class="hero-banner">
+  <div class="hero-banner__content">
+    <div id="hero">
+      <h1>
+        <span class="mmd">MMD Student With</span><br>
+        <span class="flair">Gameplay Flair</span>
+      </h1>
+    </div>
+    <a href="#welcome-section" class="scroll-indicator" id="scroll-button"> 
+      <p>SCROLL</p>
+      <span>&darr;</span> <!-- Pil ned -->
+    </a>
+    
+    <img src="images/portrait.svg" alt="portrait" class="hero-image">
+  </div>
+</section>
+
+   <!-- Left Column -->
+<section class="welcome-section" id="welcome-section">
+  <div class="welcome-section__content">
+    <!-- Intro Column -->
+    <div class="welcome-section__intro-column">
+      <div class="welcome-section__separator"></div>
+      <h2><span class="welcome-section__welcome-text"><strong>WELCOME</strong></span></h2>
+      <p>
+        My name is <strong>Cindie Jønsson</strong> and I’m a passionate multimedia designer student, with a strong focus on <strong>game design</strong>.
+      </p>
+      <p>
+        I thrive on every stage of the, <strong>creative process</strong> from initial concept development and <strong>visual design </strong>to final implementation.
+      </p>
+      <p>
+        My work is driven by a love for <strong>storytelling</strong> and interactive media, aiming to <strong>create</strong> experiences that brings unique characters and worlds to life. Throughout my studies, I have developed the ability to create <strong>experience designs</strong> through various projects, honing my skills in industry-leading software. <br><br>In my portfolio, you will find examples of <strong>character designs</strong> , <strong>game assets</strong> , <strong>game menus</strong> and <strong>and 3D experiences</strong>.
+      </p>
+      <p> <br><strong> Feel free to explore and enjoy!</strong></p>
+    </div>
+
+    <!-- Right Column -->
+    <div class="welcome-section__categories-column">
+      <div class="welcome-section__category">
+        <div class="welcome-section__category__icon">
+          <img src="icon/controller_icon.png" alt="Brætspil Icon">
+        </div>
+        <div class="welcome-section__category__text">
+          <h3><span class="welcome-section__Games_headline"><strong>Games</strong></span></h3>
+          <p>
+            I’m passionate about developing casual and mobile games that are fun, accessible, and engaging. I enjoy creating vibrant characters, intuitive mechanics, and rewarding gameplay loops. <strong> My thing? </strong> - playful designs, and polished game menus — crafted to deliver experiences that captivate players of all ages.
+          </p>
+        </div>
+      </div>
+
+      <div class="welcome-section__category">
+        <div class="welcome-section__category__icon">
+          <img src="icon/design_icon.png" alt="Brætspil Icon">
+        </div>
+        <div class="welcome-section__category__text">
+          <h3><span class="welcome-section__Design_headline"><strong>Design</strong></span></h3>
+          <p>
+            Design plays a crucial role in my creative process. I use tools like Illustrator and Figma to craft intuitive interfaces and engaging visuals, ensuring a seamless user experience. For 3D projects, Blender and construct helps bring my ideas to life with immersive environments and dynamic assets, delivering designs that are both functional and visually compelling.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+        <div class="competences-container">
+        <div class="competences-icons">
+          <div class="icon">
+            <img src="icon/figma_icon.png" alt="figma">
+          </div>
+          <div class="icon">
+            <img src="icon/unity_icon.jpg" alt="Unity">
+          </div>
+          <div class="icon">
+            <img src="icon/adobe_icon.jpg" alt="adobe">
+          </div>
+          <div class="icon">
+            <img src="icon/blender_icon.png" alt="blender">
+          </div>
+          <div class="icon">
+            <img src="icon/construct_icon.png" alt="construct">
+          </div>
+        </div>
+      </div>
+      
+      <div class="highlighted-container">
+        <div class="minigame-video">
+          <video autoplay loop muted>
+            <source src="videos/test.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>  
+        </div>
+        <div class="minigame-text">
+          <h3>Mini-Game Showcase</h3>
+          <p>Imagine stepping into a vibrant and lively world, where you control a brave character navigating through a series of challenging levels. 
+            <p><b>Your mission:</b> Collect gold coins to earn the highest score. But beware! Dangerous crocodiles lurk around every corner. Be careful, you might lose a life.</p>
+            <p>Are you ready to take on the adventure and become the next gold hunter?</p>
+        </div>
+      </div>
+      
+      <section class="portfolio">
+        <h2 class="portfolio-heading">Portfolio</h2>
+        <div class="portfolio-carousel-wrapper">
+          <button class="carousel-arrow left-arrow" aria-label="Scroll Left">←</button>
+          <div class="portfolio-carousel">
+            <div class="portfolio-item">
+              <div class="flipbox">
+                <div class="flipbox-inner">
+                  <div class="flipbox-front">
+                    <video autoplay loop muted>
+                      <source src="videos/3d_room.mp4" title="Project 1" controls>
+                    </video>
+                    <h2 class="flipbox-title">3D Immersive Room</h2>
+                  </div>
+                  <div class="flipbox-back">
+                    <p>Innovative 3D Room Experience Combining Immersion and Interactivity.</p>
+                    <a href="all-projects.html" class="flipbox-link">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <div class="flipbox">
+                <div class="flipbox-inner">
+                  <div class="flipbox-front">
+                    <img src="images/game_lobby.png" alt="game lobby">
+                    <h2 class="flipbox-title">Game Lobby</h2>
+                  </div>
+                  <div class="flipbox-back">
+                    <p>Colourful And Playful Game Lobby Design</p>
+                    <a href="all-projects.html" class="flipbox-link">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <div class="flipbox">
+                <div class="flipbox-inner">
+                  <div class="flipbox-front">
+                    <video autoplay loop muted>
+                      <source src="videos/mini-game-platform.mp4" title="Treasure Tides" controls>
+                    </video>
+                    <h2 class="flipbox-title">Mini-Game Design - Treasure Tides</h2>
+                  </div>
+                  <div class="flipbox-back">
+                    <p>2D Minigame Draft - Treasure Tides</p>
+                    <a href="all-projects.html" class="flipbox-link">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <div class="flipbox">
+                <div class="flipbox-inner">
+                  <div class="flipbox-front">
+                    <img src="images/guitar_character.svg" alt="Game Guitar character">
+                    <h2 class="flipbox-title">Game Character Design</h2>
+                  </div>
+                  <div class="flipbox-back">
+                    <p>Design Of a Colorful Punk Rock Game Character</p>
+                    <a href="all-projects.html" class="flipbox-link">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <div class="flipbox">
+                <div class="flipbox-inner">
+                  <div class="flipbox-front">
+                    <img src="images/item-bomb.svg" alt="game bomb item illustration">
+                    <h2 class="flipbox-title">In-Game Bomb Item Design</h2>
+                  </div>
+                  <div class="flipbox-back">
+                    <p>In-Game Bomb Design</p>
+                    <a href="all-projects.html" class="flipbox-link">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <div class="flipbox">
+                <div class="flipbox-inner">
+                  <div class="flipbox-front">
+                    <img src="images/item-blaster.svg" alt="game blaster item illustration">
+                    <h2 class="flipbox-title">In-Game Blaster Item Design</h2>
+                  </div>
+                  <div class="flipbox-back">
+                    <p>In-Game Blaster Item Design</p>
+                    <a href="all-projects.html" class="flipbox-link">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-arrow right-arrow" aria-label="Scroll Right">→</button>
+        </div>
+        <a href="all-projects.html" class="see-all-button">See All</a>
+      </section>      
+    
+    <!-- Contact form -->
+    <div class="contact-form hidden">
+        <button class="close-button">X</button>
+        <h2>Contact me now!</h2>
+        <p>Got a question? Fire a message!</p>
+        <form id="contact-form" action="#" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Dit navn" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Din email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Din besked" required></textarea>
+
+            <button type="submit">Let's go!</button>
+        </form>
+    </div>
+
+    <div class="parent-container">
+      <div class="questions-container">
+        <div class="questions" id="form-container">
+          <h2 class="questions__title">
+            <span class="questions__ready">Ready To Collab?</span><br>
+            <span class="questions__lets-connect">Let's Connect Today!</span>
+          </h2>
+          <form id="contact-form" class="questions__form" onsubmit="submitForm(event)">
+            <label for="name" class="questions__label">Name</label>
+            <input type="text" name="name" placeholder="Insert your preferred name here" required class="questions__input">
+        
+            <label for="email" class="questions__label">Email</label>
+            <input type="email" name="email" placeholder="And the email please?" required class="questions__input">
+        
+            <label for="message" class="questions__label">Message</label>
+            <textarea name="message" rows="4" placeholder="Fire your questions here!" required class="questions__textarea"></textarea>
+        
+            <button type="submit" class="questions__button">Let's Go!</button>
+          </form>
+        </div>
+        <!-- Hidden Thank You Message -->
+        <div id="thank-you-message" class="questions" style="display: none;">
+          <h2 class="questions__title">Thank you for submitting!</h2>
+          <p class="questions__ready">I appreciate you reaching out. I will get back to you as soon as possible.</p>
+        </div>
+      </div>
+    
+      <div class="info-container">
+        <p class="info-container__text">
+          Whether you're looking for collaboration, assistance, or simply to get your questions answered, I'm here to help. 
+          I value building strong, meaningful partnerships to bring your ideas to life.
+        </p>
+        <ul class="info-container__list">
+          <li class="info-container__item"><strong>Collaborate:</strong> Work together on amazing projects.</li>
+          <li class="info-container__item"><strong>Inquire:</strong> Get your questions answered directly.</li>
+          <li class="info-container__item"><strong>Engage:</strong> Build lasting connections with me.</li>
+        </ul>
+      </div>
+    </div>
+    
+  
+       <!-- Panda Section -->
+   <div class="panda-container"></div>
+  
+   <div class="panda"></div>
+</div>
+
+   
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Cluminary. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="icon/linkedin_icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="icon/facebook_icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="icon/instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <img src="icon/youtube_icon.png" alt="YouTube">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+<button id="back-to-top" onclick="scrollToTop()">↑</button>
+
+
+
+</body>
+</html>
