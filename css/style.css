@@ -1,0 +1,1499 @@
+/* Font Face Declaration */
+@font-face {
+  font-family: 'bicubikregular';
+  src: url('bicubik-71qr-webfont.woff2') format('woff2'),
+       url('bicubik-71qr-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppinsregular';
+  src: url('poppins-regular-webfont.woff2') format('woff2'),
+       url('poppins-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Global Styles */
+body {
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+  background-color: #111;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: 'poppinsregular', sans-serif; /* Apply the font to all <p> elements */
+}
+
+/* Navigation Menu */
+.nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 0;
+}
+
+/* Block: nav-container */
+.nav__container {
+  display: flex;
+  justify-content: space-between;  /* Places elements on each side */
+  align-items: center;  /* Center vertically */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Element: .site-name */
+.nav__container .site-name {
+  color: #fff;  /* White text */
+  font-family: 'poppinsregular', sans-serif;
+  font-size: 35px;  /* Larger font */
+  font-weight: bold;
+  margin-left: 10%;
+  white-space: nowrap; /* Prevents wrapping of text */
+}
+
+/* Block: nav-list */
+.nav__container .nav-list {
+  list-style: none;
+  font-family: 'poppinsregular', sans-serif;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 40%;
+  font-weight: bold;
+}
+
+/* Element: nav-list__item */
+.nav__container .nav-list__item {
+  margin: 0 20px;  /* Smaller margin between menu items */
+}
+
+/* Element: nav-list__item a */
+.nav__container .nav-list__item a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav__container .nav-list__item a:hover {
+  color: #a50dc0;
+}
+
+/* Adjusting menu items to the left */
+.nav__container .nav-list {
+  margin-left: -50px; /* Pulls menu to the left */
+}
+
+/* Block: nav-container img */
+.nav__container img {
+  margin-left: 17%;
+  height: 60px;
+}
+
+/* Remove default link styling for logo and site name */
+.nav__container .logo-link, .nav__container .site-name-link {
+  text-decoration: none;
+  color: inherit; /* Inherits color from child element */
+  display: inline-block; /* Ensures proper alignment with logo and site name */
+}
+
+.nav__container .logo-link img {
+  display: block; /* Prevents image from inheriting inline styles from <a> */
+}
+
+.nav__container .logo-link {
+  margin-left: 16%;
+}
+
+.nav__container .site-name-link {
+  margin-right: 40%;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  /* Stack the navigation items vertically and center-align */
+  .nav__container {
+    flex-direction: column;
+    align-items: center;  /* Center everything horizontally */
+    text-align: center;   /* Ensure text is also centered */
+  }
+
+  /* Site name and logo */
+  .nav__container .site-name {
+    font-size: 28px;  /* Slightly smaller font size on mobile */
+    margin-left: 0;    /* Remove left margin */
+  }
+
+  .nav__container img {
+    margin-left: 0;    /* Remove left margin */
+    height: 50px;      /* Adjust the logo size */
+  }
+
+  /* Adjust navigation list */
+  .nav__container .nav-list {
+    display: block;  /* Change from flex to block */
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  /* Adjust nav list items */
+  .nav__container .nav-list__item {
+    margin: 10px 0;  /* Add space between items */
+  }
+
+  /* Adjust the menu item link styles */
+  .nav__container .nav-list__item a {
+    font-size: 18px;  /* Increase font size slightly on mobile */
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh; /* Fuldt skærmhøjde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Block: hero-banner */
+.hero-banner {
+  position: relative;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Block: hero-content */
+.hero-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Element: #hero h1 */
+.hero-banner__content #hero h1 {
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+  font-size: 3em; /* Større tekst */
+  margin: 0;
+  color: #fff;
+  text-align: left; /* Teksten er venstrejusteret */
+  margin-right: 20px; /* Plads mellem teksten og billedet */
+}
+
+/* Element: .mmd */
+.hero-banner__content .mmd {
+  color: white; /* MMD i hvid */
+}
+
+/* Element: .flair */
+.hero-banner__content .flair {
+  color: #a50dc0;
+}
+
+/* Element: hero-image */
+.hero-banner__content .hero-image {
+  width: 650px; /* Juster størrelsen af billedet efter behov */
+  height: auto;
+  margin-left: 20px; /* Plads mellem teksten og billedet */
+}
+
+/* Block: scroll-indicator */
+.hero-banner__content .scroll-indicator {
+  position: absolute;
+  bottom: 60px; /* Afstand fra bunden */
+  left: 50%; /* Placerer den horisontalt i midten */
+  transform: translateX(-50%); /* Justerer til præcis center */
+  text-align: center;
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+  color: #333; /* Tilpas tekstfarve */
+  text-decoration: none; /* Removes underline */
+  color: inherit;        /* Matches the parent text color */
+  display: inline-block; /* Ensures proper alignment */
+  cursor: pointer;       /* Adds a pointer on hover */
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero-banner__content .scroll-indicator span {
+  font-size: 24px;
+  display: block;
+  animation: bounce 1.5s infinite;
+}
+
+/* Keyframes for the bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.cta-button:hover {
+  background-color: #606464;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* Adjust height to content */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  .hero-banner {
+    height: auto; /* Adjust height for content */
+    padding: 40px 20px;
+  }
+
+  .hero-banner__content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align text and image */
+    text-align: center; /* Center text alignment */
+  }
+
+  .hero-banner__content #hero h1 {
+    font-size: 2rem; /* Reduce font size */
+    line-height: 1.4; /* Adjust line height for readability */
+    max-width: 90%; /* Restrict text width for readability */
+    margin: 0 auto 20px; /* Center text and add spacing */
+  }
+
+  .hero-banner__content .hero-image {
+    width: 90%; /* Scale image width to fit screen */
+    max-width: 400px; /* Limit maximum size */
+    margin-top: 20px; /* Add spacing above the image */
+  }
+
+  .scroll-indicator {
+    position: static; /* Remove absolute positioning */
+    margin-top: 20px; /* Add space above the indicator */
+    display: flex; /* Center-align indicator */
+    justify-content: center;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .hero-banner__content #hero h1 {
+    font-size: 1.5rem; /* Further reduce font size */
+    line-height: 1.3; /* Adjust line height */
+    max-width: 95%; /* Ensure proper fit */
+  }
+
+  .hero-banner__content .hero-image {
+    width: 80%; /* Reduce image size further */
+  }
+
+  .scroll-indicator {
+    margin-top: 60px; /* Adjust spacing for smaller screens */
+    font-size: 12px; /* Adjust font size */
+  }
+}
+
+
+/* Sections background and layout */
+/* Welcome Section Styles */
+.welcome-section {
+  background-color: #131212;
+  color: #eee;
+  padding: 80px 20px;
+  text-align: left;
+  transform: translateX(-50px); /* Startposition */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation: slide-in 1s ease-out forwards;
+}
+
+/* Block: welcome-text */
+.welcome-section__welcome-text {
+  color: #820ecf;
+}
+
+/* Block: welcome-content */
+.welcome-section__content {
+  display: flex;
+  justify-content: space-between; /* Ensure space between the two columns */
+  gap: 0%; /* Adds space between the columns */
+  max-width: 1400px;
+  margin: 0 auto; /* Centers the content */
+  font-family: system-ui;
+}
+
+/* Block: intro-column */
+.welcome-section__intro-column,
+.welcome-section__categories-column {
+  flex: 1 1 45%; /* Each column takes up 45% of the available space */
+  min-width: 500px; /* Prevents columns from becoming too narrow */
+  margin-left: 145px;
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+}
+
+/* Element: .separator */
+.welcome-section__separator {
+  width: 80px;
+  height: 5px;
+  background-color: #a50dc0;
+  margin-bottom: 20px;
+}
+
+/* Block: categories-column */
+.welcome-section__categories-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+/* Block: category */
+.welcome-section__category {
+  display: flex;
+  align-items: flex-start; /* Align icon and text at the top */
+  gap: 20px;
+}
+
+/* Element: category .icon */
+.welcome-section__category__icon {
+  width: 60px; /* Adjust icon width */
+  height: 60px; /* Adjust icon height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.welcome-section__category__icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Element: category .text */
+.welcome-section__category__text {
+  flex: 1; /* Allow text to take up the remaining space */
+}
+
+/* Element: category .text h3 */
+.welcome-section__category__text h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Element: category .text p */
+.welcome-section__category__text p {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 40px 10px; /* Reduce padding for smaller screens */
+    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensure the entire section is centered horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+
+  .welcome-section__content {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center-align columns */
+    justify-content: center; /* Center the content */
+    gap: 30px; /* Add space between sections */
+    margin: 0 auto; /* Remove any horizontal offset */
+  }
+
+  .welcome-section__intro-column {
+    margin: 0 auto; /* Fully center the intro column */
+    max-width: 90%; /* Limit the width for readability */
+    text-align: center; /* Center-align the text */
+  }
+
+  .welcome-section__intro-column h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+
+  .welcome-section__intro-column p {
+    font-size: 1rem; /* Adjust text size */
+    line-height: 1.6; /* Improve readability */
+  }
+
+  .welcome-section__categories-column {
+    margin: 0 auto; /* Fully center the categories column */
+    max-width: 90%; /* Ensure it fits within the viewport */
+    gap: 20px; /* Space between categories */
+  }
+
+  .welcome-section__category {
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center-align icon and text */
+    text-align: center; /* Center-align text */
+    gap: 15px; /* Adjust spacing for compact layout */
+  }
+
+  .welcome-section__category__icon {
+    width: 80px; /* Reduce icon size */
+    height: 80px;
+    margin-bottom: 10px; /* Add spacing below the icon */
+  }
+
+  .welcome-section__category__text h3 {
+    font-size: 1.4rem; /* Adjust heading size */
+  }
+
+  .welcome-section__category__text p {
+    font-size: 0.9rem; /* Slightly smaller text */
+    line-height: 1.4; /* Adjust line height */
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 30px 10px; /* Reduce padding further */
+  }
+
+  .welcome-section__content {
+    gap: 25px; /* Reduce spacing between sections */
+  }
+
+  .welcome-section__intro-column {
+    margin: 0 auto; /* Ensure it is perfectly centered */
+    max-width: 90%; /* Restrict width for extra small screens */
+  }
+
+  .welcome-section__intro-column p {
+    font-size: 0.95rem; /* Slightly smaller text */
+    line-height: 1.5; /* Better spacing */
+  }
+
+  .welcome-section__category__icon {
+    width: 70px; /* Smaller icon size */
+    height: 70px;
+  }
+
+  .welcome-section__category__text h3 {
+    font-size: 1.2rem; /* Smaller heading size */
+  }
+
+  .welcome-section__category__text p {
+    font-size: 0.85rem; /* Smaller text */
+    line-height: 1.3;
+  }
+}
+
+/* Animation */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Sections background and layout */
+.competences-section {
+  background-color: #f8eeee;  
+  padding: 50px;
+}
+
+
+/* Icon section */
+.competences-container {
+  display: flex;
+  justify-content: center;
+  background-color: #2c292952;  
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 0; /* adding space between icons and portfolio */
+}
+
+.competences-icons {
+  display: flex;
+  gap: 20px;
+  margin-left: 150px;
+  margin-top: 45px;
+}
+
+.icon {
+  width: 260px;
+  height: 260px;
+}
+
+.icon img {
+  width: 200px; /* Størrelse af ikonbilleder */
+  height: 200px;
+  object-fit: contain; /* Bevar proportionerne */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .icon {
+    width: clamp(120px, 15vw, 200px);
+    height: clamp(120px, 15vw, 200px);
+  }
+
+  .competences-icons {
+    gap: 20px; /* Reduce spacing on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .competences-container {
+    flex-direction: column; /* Stack rows vertically */
+    align-items: center; /* Center align the container */
+    gap: 20px;
+    width: 100%; /* Ensure it doesn’t exceed the screen width */
+    padding: 10px; /* Add some padding for aesthetics */
+  }
+
+  .competences-icons {
+    display: flex;
+    flex-wrap: wrap; /* Wrap icons to the next row if needed */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+    gap: 15px; /* Adjust spacing */
+    width: 100%; /* Fit within the container */
+    margin: 0 auto; /* Center the container itself */
+  }
+
+  .icon {
+    width: clamp(100px, 20vw, 180px); /* Adjust size responsively */
+    height: clamp(100px, 20vw, 180px);
+    display: flex; /* Ensure content inside the icon is centered */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+
+  .icon img {
+    width: 80%; /* Scale images to stay inside their parent box */
+    height: 80%;
+    object-fit: contain; /* Maintain proportions */
+  }
+}
+
+@media (max-width: 480px) {
+  .icon {
+    width: 90px; /* Smaller icons for very small screens */
+    height: 90px;
+  }
+
+  .icon img {
+    width: 70%; /* Further scaling */
+    height: 70%;
+  }
+
+  .competences-icons {
+    gap: 10px; /* Reduce gap */
+  }
+}
+
+
+
+/* Block: highlighted-container */
+.highlighted-container {
+  display: flex; /* Enables side-by-side layout */
+  gap: 70px; /* Adds space between video and text */
+  max-width: 1910px; /* Limits width of the container */
+  margin: 0 auto; /* Centers the container */
+  background-color: #131212;
+  height: 700px;
+}
+
+/* Element: minigame-video within highlighted-container */
+.minigame-video {
+  display: flex;
+  justify-content: center; /* Center the video */
+}
+
+.minigame-video video {
+  width: 95%;
+  height: 95%;
+  margin-left: 25%;
+}
+
+/* Element: minigame-text within highlighted-container */
+.minigame-text {
+  flex: 1; /* Makes text take up the remaining space */
+  color: #eee;
+  margin-left: 10%; /* Reduced margin to bring text closer to the video */
+  margin-right: 26%;
+  width: 10%; /* Adjusted the width to take up more space */
+  margin-top: 5%;
+}
+
+.minigame-text h3 {
+  color: #820ecf; /* Highlighted heading */
+  font-size: 24px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.minigame-text p {
+  font-size: 16px;
+  width: 400px;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments for highlighted-container */
+/* Responsive Adjustments for highlighted-container */
+@media (max-width: 1024px) {
+  .highlighted-container {
+    flex-direction: column; /* Stack video and text vertically */
+    align-items: center; /* Center them horizontally */
+    gap: 40px; /* Reduce space for smaller screens */
+  }
+
+  .minigame-video {
+    flex: none; /* Remove flex properties for stacking */
+    width: 100%; /* Ensure video takes full width */
+    margin: 0 auto; /* Center video */
+  }
+
+  .minigame-text {
+    text-align: center; /* Center-align text */
+    padding: 10px 20px; /* Reduce padding */
+    width: 90%; /* Prevent text from being too wide */
+  }
+}
+
+@media (max-width: 768px) {
+  .highlighted-container {
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers them horizontally */
+  }
+
+  .minigame-video video {
+    width: 100%; /* Full width for smaller screens */
+    height: auto;
+  }
+
+  .minigame-text {
+    text-align: center; /* Centers text */
+    margin-top: 10px;
+    width: 90%; /* Ensures text is more centered and responsive */
+  }
+}
+
+@media (max-width: 480px) {
+  .highlighted-container {
+    padding: 20px 10px; /* Reduce padding for small screens */
+  }
+
+  .minigame-text {
+    text-align: center;
+    width: 100%;
+  }
+
+  .minigame-text h3 {
+    font-size: 18px;
+  }
+
+  .minigame-text p {
+    font-size: 12px;
+    line-height: 1.4; /* Adjust line height for readability */
+  }
+}
+
+/* Block: portfolio */
+.portfolio {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+}
+
+/* Element: portfolio-heading */
+.portfolio-heading {
+  font-size: 36px;
+  color: #820ecf;
+  margin-bottom: 30px;
+}
+
+/* Block: portfolio-carousel-wrapper */
+.portfolio-carousel-wrapper {
+  position: relative;
+  max-width: 1350px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Block: portfolio-carousel */
+.portfolio-carousel {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+  padding: 10px 0;
+}
+
+/* Block: portfolio-item */
+.portfolio-item {
+  flex: 0 0 350px; /* Fixed width for items */
+  display: flex;
+  justify-content: center;
+}
+
+/* Block: flipbox */
+.flipbox {
+  perspective: 1000px;
+  width: 500px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(77, 76, 76, 0.5);
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Element: flipbox-inner within flipbox */
+.flipbox-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* Flipbox hover effect */
+.flipbox:hover .flipbox-inner {
+  transform: rotateY(180deg);
+}
+
+/* Elements: flipbox-front and flipbox-back within flipbox */
+.flipbox-front, .flipbox-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Flipbox front styles */
+.flipbox-front {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: linear-gradient(135deg, #a50dc0, #5e00d4);
+}
+
+/* Media adjustments for flipbox front elements */
+.flipbox-front img, 
+.flipbox-front video {
+  width: 100%; /* Make sure they fill the container */
+  height: 100%; /* Ensure consistent scaling */
+  object-fit: cover; /* Crops media to fill the flipbox while maintaining aspect ratio */
+}
+
+/* Specific Adjustment for SVGs */
+.flipbox-front img {
+  max-width: 100%; /* Prevents oversized SVGs */
+  max-height: 243px; /* Keeps SVGs contained within the flipbox */
+  object-fit: contain; /* Keeps SVGs fully visible, with padding if necessary */
+}
+
+.flipbox-front video {
+  width: 100%; /* Full width of the container */
+  object-fit: cover; /* Ensures the video fills the container while maintaining aspect ratio */
+  height: 81%; 
+  background: linear-gradient(135deg, #a50dc0, #5e00d4);
+}
+
+/* Flipbox title styles */
+.flipbox-title {
+  margin: 10px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Flipbox back styles */
+.flipbox-back {
+  background: linear-gradient(135deg, #a50dc0, #5e00d4);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.flipbox-back p {
+  margin: 10px 0;
+}
+
+.flipbox-link {
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+/* Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* "See All" Button */
+.see-all-button {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 20px; /* Adjusted padding for a round button */
+  font-size: 18px;
+  color: #fff; /* White text color for contrast */
+  background-color: #a50dc0; /* Blue color fitting the site style */
+  border: none;
+  border-radius: 50px; /* Round button */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.see-all-button:hover {
+  background-color: #5e00d4; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight scale for button effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .portfolio-carousel-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .portfolio-item {
+    flex: 0 0 300px; /* Slightly smaller cards */
+  }
+
+  .flipbox {
+    width: 100%; /* Full width on medium screens */
+    height: auto; /* Adapt height to maintain ratio */
+  }
+
+  .flipbox-front img, 
+  .flipbox-front video, 
+  .flipbox-front svg {
+    object-fit: contain; /* Better scaling for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-carousel {
+    gap: 10px; /* Reduce gap between items */
+  }
+
+  .carousel-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .flipbox {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Adaptive height */
+  }
+
+  .see-all-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-heading {
+    font-size: 28px;
+  }
+
+  .portfolio-carousel {
+    flex-wrap: wrap; /* Stack items vertically */
+  }
+
+  .portfolio-item {
+    flex: 1 0 100%; /* Full width for each item */
+  }
+
+  .flipbox {
+    height: auto; /* Allow adaptive height */
+  }
+
+  .flipbox-title {
+    font-size: 16px; /* Smaller title */
+  }
+
+  .see-all-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+footer p {
+  margin: 0;
+  color: #888;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 15px; /* Reduced padding for better layout on medium screens */
+  }
+
+  .social-links {
+    margin-top: 15px;
+  }
+
+  .social-links a {
+    margin: 0 5px; /* Closer spacing for icons */
+    width: 35px; /* Reduced size for social icons */
+    height: 35px;
+  }
+
+  .container {
+    padding: 0 10px; /* Adjusted padding for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 20px 10px; /* Further reduced padding for smaller screens */
+  }
+
+  .social-links {
+    margin-top: 10px;
+  }
+
+  .social-links a {
+    margin: 0 5px; /* Further reduced spacing between icons */
+    width: 30px; /* Even smaller size for social icons */
+    height: 30px;
+  }
+
+  .container {
+    padding: 0 5px; /* Further adjusted padding for small screens */
+  }
+}
+
+/* Panda container */
+.panda-container {
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* Pandaen animation */
+.panda {
+  width: 5cm;
+  height: 5.2cm;
+  background-image: url('../images/panda.png');
+  background-size: 400px 200px;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 0;
+  right: -5cm;
+  background-position: 0 0;
+  animation: slide-in 0.8s ease-out forwards, dab 1s steps(1) 0.8s forwards; /* Ensures both animations happen after the slide-in */
+  z-index: 200;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.closing {
+  animation: fade-out 0.8s ease-in;
+}
+
+/* Keyframes */
+@keyframes slide-in {
+  0% {
+    right: -5cm;
+    background-position: 0 0;
+  }
+  100% {
+    right: 0;
+    background-position: 0 0;
+  }
+}
+
+@keyframes stay-on-first-frame {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes dab {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200px 0;
+  }
+}
+
+/* contact form animation */
+.contact-form {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #3a3a3a;
+  padding: 2rem;
+  width: 20rem;
+  box-shadow: 0 0 10px rgb(77, 76, 76);
+  z-index: 10;
+  transform: translateY(100%); /* Start below the screen */
+  animation: slide-up 0.8s ease-out forwards; /* Slide up animation */
+  border-radius: 10px
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%); /* Start off-screen */
+  }
+  100% {
+    transform: translateY(0); /* End in place */
+  }
+}
+
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'poppinsregular', sans-serif; 
+  margin-bottom: 1rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'poppinsregular', sans-serif; 
+  border-radius: 10px
+}
+
+.contact-form button {
+  background-color: rgb(92, 13, 92);
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: rgb(92, 13, 92);
+  transform: scale(1.1);
+}
+
+/* hide form */
+.contact-form.hidden {
+  display: none;
+}
+
+
+/* Panda container and contactform animations*/
+.panda-container,
+.contact-form {
+  transition: transform 0.1s ease-out;
+}
+
+/* close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 5px 10px;
+  transition: transform 0.5s ease;
+  z-index: 10; /* Ensures it's clickable */
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c1c1c;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+
+}
+
+#loader {
+  text-align: center;
+}
+
+#loader-text {
+  font-size: 80px; /* bigger text */
+  font-weight: 700;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  opacity: 0.9;
+ 
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+#progress {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 200px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+#bar {
+  width: 0;
+  height: 100%;
+  background-color: rgb(92, 13, 92);
+  border-radius: 5px;
+}
+
+#progress-text {
+  font-size: 50px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.7;
+  letter-spacing: 10px;
+}
+
+#content {
+  
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  }
+
+
+ /* Block: .questions */
+.questions {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 60px;
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+  border-radius: 10px;
+  background-color: #111;
+}
+
+.questions__title {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 42px;
+  color: RGB(128, 0, 128);
+  margin-bottom: 20px; /* Adjusted to provide space */
+}
+
+.questions__ready {
+  color: white;
+}
+
+.questions__lets-connect {
+  color: #820ecf;
+}
+
+.questions__label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.questions__input,
+.questions__textarea {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border-color: RGB(128, 0, 128);
+  border-radius: 10px;
+  background-color: #111;
+  border-style: solid;
+  color: white;
+}
+
+.questions__input::placeholder,
+.questions__textarea::placeholder {
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+}
+
+.questions__button {
+  width: 100%;
+  padding: 12px;
+  background-color: #820ecf;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.questions__button:hover {
+  background-color: rgb(92, 13, 92);
+}
+
+/* Block: .parent-container */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align at the top */
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Ensure items stack on small screens */
+}
+
+/* Block: .questions-container */
+.questions-container {
+  max-width: 500px;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+}
+
+/* Block: .info-container */
+.info-container {
+  font-family: 'bicubikregular', Helvetica, sans-serif;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 18%;
+  max-width: 400px; /* Adjusted width to prevent overflow */
+}
+
+.info-container__text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.info-container__list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.info-container__item {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #820ecf;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .questions {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .questions__title {
+    font-size: 24px; /* Adjusted font size for better readability on smaller tablets and phones */
+  }
+
+  .info-container {
+    max-width: 100%; /* Make `.info-container` full-width on smaller screens */
+  }
+
+  .parent-container {
+    flex-direction: column; /* Stack the `.questions-container` and `.info-container` vertically */
+  }
+}
+
+@media (max-width: 480px) {
+  .questions {
+    padding: 10px;
+  }
+
+  .questions__title {
+    font-size: 20px; /* Further reduce font size for smaller screens */
+  }
+
+  .questions__input,
+  .questions__textarea {
+    padding: 8px;
+  }
+
+  .questions__button {
+    padding: 10px;
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .parent-container {
+    padding: 10px;
+  }
+
+  .questions-container,
+  .info-container {
+    max-width: 100%; /* Make the containers full-width on mobile screens */
+  }
+}
+  /* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+/* Show the button when scrolling down */
+body.scroll-enabled #back-to-top {
+  display: block;
+}

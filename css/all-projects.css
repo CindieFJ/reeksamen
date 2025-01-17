@@ -1,0 +1,357 @@
+/* Font Face Declaration */
+@font-face {
+  font-family: 'bicubikregular';
+  src: url('bicubik-71qr-webfont.woff2') format('woff2'),
+       url('bicubik-71qr-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppinsregular';
+  src: url('poppins-regular-webfont.woff2') format('woff2'),
+       url('poppins-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global Styles */
+body {
+    font-family: 'bicubikregular', Helvetica, sans-serif;
+    background-color: #111;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'poppinsregular', sans-serif; /* Apply the font to all <p> elements */
+}
+
+/* Navigation Menu */
+.nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 0;
+}
+
+/* Block: nav-container */
+.nav__container {
+  display: flex;
+  justify-content: space-between;  /* Places elements on each side */
+  align-items: center;  /* Center vertically */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Element: .site-name */
+.nav__container .site-name {
+  color: #fff;  /* White text */
+  font-family: 'poppinsregular', sans-serif;
+  font-size: 35px;  /* Larger font */
+  font-weight: bold;
+  margin-left: 10%;
+  white-space: nowrap; /* Prevents wrapping of text */
+}
+
+/* Block: nav-list */
+.nav__container .nav-list {
+  list-style: none;
+  font-family: 'poppinsregular', sans-serif;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 40%;
+  font-weight: bold;
+}
+
+/* Element: nav-list__item */
+.nav__container .nav-list__item {
+  margin: 0 20px;  /* Smaller margin between menu items */
+}
+
+/* Element: nav-list__item a */
+.nav__container .nav-list__item a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav__container .nav-list__item a:hover {
+  color: #a50dc0;
+}
+
+/* Adjusting menu items to the left */
+.nav__container .nav-list {
+  margin-left: -50px; /* Pulls menu to the left */
+}
+
+/* Block: nav-container img */
+.nav__container img {
+  margin-left: 17%;
+  height: 60px;
+}
+
+/* Remove default link styling for logo and site name */
+.nav__container .logo-link, .nav__container .site-name-link {
+  text-decoration: none;
+  color: inherit; /* Inherits color from child element */
+  display: inline-block; /* Ensures proper alignment with logo and site name */
+}
+
+.nav__container .logo-link img {
+  display: block; /* Prevents image from inheriting inline styles from <a> */
+}
+
+.nav__container .logo-link {
+  margin-left: 16%;
+}
+
+.nav__container .site-name-link {
+  margin-right: 40%;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  /* Stack the navigation items vertically and center-align */
+  .nav__container {
+    flex-direction: column;
+    align-items: center;  /* Center everything horizontally */
+    text-align: center;   /* Ensure text is also centered */
+  }
+
+  /* Site name and logo */
+  .nav__container .site-name {
+    font-size: 28px;  /* Slightly smaller font size on mobile */
+    margin-left: 0;    /* Remove left margin */
+  }
+
+  .nav__container img {
+    margin-left: 0;    /* Remove left margin */
+    height: 50px;      /* Adjust the logo size */
+  }
+
+  /* Adjust navigation list */
+  .nav__container .nav-list {
+    display: block;  /* Change from flex to block */
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  /* Adjust nav list items */
+  .nav__container .nav-list__item {
+    margin: 10px 0;  /* Add space between items */
+  }
+
+  /* Adjust the menu item link styles */
+  .nav__container .nav-list__item a {
+    font-size: 18px;  /* Increase font size slightly on mobile */
+  }
+}
+
+
+
+/* Block: .hero-banner */
+.hero-banner {
+  background-color: #222;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Element: .hero-banner__content */
+.hero-banner__content {
+  display: inline-block; /* Ensures proper alignment for text */
+}
+
+/* Element: .hero-banner__title */
+.hero-banner__title {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* Element: .hero-banner__flair */
+.hero-banner__flair {
+  color: #a50dc0;
+}
+
+/* Block: .projects-overview */
+.projects-overview {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Element: .projects-overview__row */
+.projects-overview__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+/* Modifier: .projects-overview__row--reverse */
+.projects-overview__row--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Element: .projects-overview__image */
+.projects-overview__image {
+  max-width: 100%;
+}
+
+/* Element: .projects-overview__image-img */
+.projects-overview__image-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Element: .projects-overview__video */
+.projects-overview__video {
+  max-width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Element: .projects-overview__video-element */
+.projects-overview__video-element {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-overview__row {
+      flex-direction: column;
+  }
+
+  .projects-overview__row--reverse {
+      flex-direction: column;
+  }
+
+  .projects-overview__image-img {
+      max-width: 100%;
+  }
+
+  .projects-overview__video-element {
+      height: 100px;
+  }
+
+  .projects-overview__info {
+      text-align: center;
+  }
+}
+
+/* Element: .projects-overview__info */
+.projects-overview__info {
+  flex: 1;
+  text-align: left;
+}
+
+/* Element: .projects-overview__title */
+.projects-overview__title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #a50dc0;
+}
+
+/* Element: .projects-overview__date */
+.projects-overview__date {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* Element: .projects-overview__description */
+.projects-overview__description {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Block: .footer */
+.footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.footer p {
+  margin: 0;
+  color: #888;
+}
+
+/* Element: .footer__social-links */
+.footer__social-links {
+  margin-top: 20px;
+}
+
+/* Element: .footer__social-link */
+.footer__social-link {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Modifier: .footer__social-link:hover */
+.footer__social-link:hover {
+  transform: scale(1.1);
+}
+
+/* Element: .footer__social-link-img */
+.footer__social-link-img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    margin: 0;
+    flex-direction: column;
+    margin-left: 0; /* Remove left margin on smaller screens */
+    text-align: center;
+  }
+
+  .site-name {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .projects-overview__row {
+    flex-direction: column;
+  }
+
+  .projects-overview__video-element {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .projects-overview__info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-name {
+    font-size: 24px; /* Further reduce font size for mobile */
+  }
+
+  nav ul {
+    margin-left: 0; /* Ensure menu items are centered on mobile */
+  }
+
+  .projects-overview__row {
+    padding: 10px;
+  }
+
+  .projects-overview__image-img {
+    max-width: 100%;
+  }
+
+  .projects-overview__info {
+    padding: 10px;
+  }
+}
